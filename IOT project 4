@@ -1,0 +1,13 @@
+#include<Servo.h>
+Servo ab;
+int ir=8;
+void setup() {
+   pinMode(ir,INPUT);
+  ab.attach(11);
+}
+void loop() {
+  if(digitalRead(ir)==1)
+      ab.write(170);
+  else
+    ab.write(0);
+}
